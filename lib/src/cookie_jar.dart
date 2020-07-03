@@ -14,5 +14,11 @@ abstract class CookieJar {
   /// Load the cookies for specified uri.
   List<Cookie> loadForRequest(Uri uri);
 
+  /// Deletes all cookies for the specified uri.
+  void delete(Uri uri, [bool withDomainSharedCookie = false]);
+
+  /// Deletes all cookies for all domains.
+  void deleteAll();
+
   final bool ignoreExpires;
 }
